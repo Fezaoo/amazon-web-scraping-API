@@ -5,7 +5,10 @@ import requests
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})  # Habilita o CORS para todas as rotas locais
+CORS(app)  # Habilita o CORS para todas as rotas locais
+@app.route('/')
+def index():
+    return jsonify({'message': 'Seja bem-vindo à minha API!'})
 
 @app.route('/api/dados')
 def dados():
