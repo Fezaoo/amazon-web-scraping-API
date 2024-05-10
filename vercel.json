@@ -1,0 +1,6 @@
+{
+    "routes": [
+      { "src": "/api/dados", "dest": "/api/dados" }
+    ]
+  }
+  
